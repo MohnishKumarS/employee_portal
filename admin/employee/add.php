@@ -8,6 +8,35 @@ include(__DIR__ . '/../../layouts/header.php');
 //     exit();
 // }
 ?>
+<?php
+require '../Model/Employee.php';
+if (isset($_POST['employee_submit'])) {
+  // print_r($_POST);
+  $data = [
+    'emp_id' => $_POST['emp_id'],
+    'emp_name' => $_POST['emp_name'],
+    'emp_dep' => $_POST['emp_dep'],
+    'emp_mobile' => $_POST['emp_mobile'],
+    'emp_doj' => $_POST['emp_doj'],
+    'emp_email' => $_POST['emp_email'],
+    'emp_pass' => $_POST['emp_pass']
+  ];
+
+  $emp = new Employee();
+
+  $res = $emp->create($data);
+
+  if ($res) {
+    $_SESSION['status'] = 'success';
+    $_SESSION['message'] = 'Employee added successfully';
+  } else {
+    $_SESSION['status'] = 'error';
+    $_SESSION['message'] = 'Failed to add employee';
+  }
+}
+
+
+?>
 <div class="container-fluid">
   <div class="row">
     <!-- sidebar -->
@@ -86,8 +115,17 @@ include(__DIR__ . '/../../layouts/header.php');
         <div class="add-employee">
           <h4 class="text-center mb-3">Create New Employee</h4>
 
+          <?php
+          if (isset($_SESSION['status'])) {
+            echo "<div class='alert alert-" . $_SESSION['status'] . "'>" . $_SESSION['message'] . "</div>";
+            unset($_SESSION['status']);
+          }
+
+          ?>
+
+
           <div class="mt-4">
-            <form action="" method="post">
+            <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
               <div class="row">
                 <div class="col-lg-12 mb-3">
                   <label class="form-label">Emp ID</label>
@@ -117,7 +155,7 @@ include(__DIR__ . '/../../layouts/header.php');
                 </div>
                 <div class="col-lg-6 mb-3">
                   <label class="form-label">Date of joining</label>
-                  <input type="text" class="form-control" name="emp_doj">
+                  <input type="date" class="form-control" name="emp_doj">
 
                 </div>
                 <div class="col-lg-6 mb-3">
@@ -132,7 +170,7 @@ include(__DIR__ . '/../../layouts/header.php');
                 </div>
                 <div class="col-12">
                   <div>
-                    <button class="btn btn-outline-success">Submit</button>
+                    <button class="btn btn-outline-success" type="submit" name="employee_submit">Submit</button>
                   </div>
                 </div>
               </div>
@@ -143,6 +181,8 @@ include(__DIR__ . '/../../layouts/header.php');
     </div>
   </div>
 </div>
+
+
 
 
 <?php
