@@ -13,7 +13,7 @@
     <!-- sidebar -->
     <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar" id="sidebar">
       <!-- <h1 class="bi bi-bootstrap text-primary d-flex my-4 justify-content-center"></h1> -->
-     <div class="bi text-primary d-flex justify-content-center">      <img src="./images/ewallhost-logo.svg" alt="logo" width="100" height="100"> </div>
+     <div class="bi text-primary d-flex justify-content-center">      <img src="<?=$url ?>assets/images/logo.svg" alt="logo" width="100" height="100"> </div>
       <div class="list-group rounded-0">
         <a href="#" class="list-group-item list-group-item-action active border-0 d-flex align-items-center">
           <span class="bi bi-border-all"></span>
