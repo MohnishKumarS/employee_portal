@@ -1,12 +1,12 @@
 <?php
-  include('layouts/header.php');
+  include('../layouts/header.php');
 ?>
 <?php
 
-if (!isset($_SESSION['login'])) {
-    header("Location: login.php"); // Redirect to login if not logged in
-    exit();
-}
+// if (!isset($_SESSION['login'])) {
+//     header("Location: login.php"); // Redirect to login if not logged in
+//     exit();
+// }
 ?>
 <div class="container-fluid">
   <div class="row">
@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
       <div class="list-group rounded-0">
         <a href="#" class="list-group-item list-group-item-action active border-0 d-flex align-items-center">
           <span class="bi bi-border-all"></span>
-          <span class="ml-2"> Admin Dashboard</span>
+          <span class="ml-2"> Employee Dashboard</span>
         </a>
         <a href="#" class="list-group-item list-group-item-action border-0 align-items-center">
           <span class="bi bi-box"></span>
@@ -117,5 +117,5 @@ if (!isset($_SESSION['login'])) {
 
 
 <?php
-  include('./layouts/footer.php');
+  include('../layouts/footer.php');
 ?>

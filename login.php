@@ -1,5 +1,5 @@
 <?php
-  include('header.php');
+  include('./layouts/header.php');
 ?>
 
 <div class="wrapper fadeInDown ">
@@ -8,7 +8,7 @@
 
     <!-- Icon -->
     <div class="fadeIn first text-center">
-    <img src="<?= $url?>images/logo.svg" alt="logo" width="130"> 
+    <img src="<?= $url?>assets/images/logo.svg" alt="logo" width="130"> 
    
     </div>
 
@@ -53,5 +53,5 @@
 
 
 <?php
-  include('footer.php');
+  include('./layouts/footer.php');
 ?>

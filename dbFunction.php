@@ -8,7 +8,7 @@ class dbFunction {
 
     public function __construct(){
         
-        $db = new dbConnect();  
+        $db = new Database();  
         $this->conn = $db->getConnection();
     }
 

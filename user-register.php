@@ -44,6 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          if($login_check){
             // print_r($_SESSION);
             //  $_SESSION['success_msg'] = "Login successful";
+            if($_SESSION['role'] == 'admin'){
+                header("location:admin/index.php");
+            }else{
+                header("location:user/index.php");
+            }
             //  header("location:index.php");
          }else{
              $_SESSION['error_msg'] = "Invalid email or password";

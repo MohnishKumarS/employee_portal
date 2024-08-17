@@ -1,6 +1,6 @@
 <?php
 
-include('header.php');
+include('./layouts/header.php');
 ?>
 
 <div class="wrapper fadeInDown">
@@ -9,7 +9,7 @@ include('header.php');
 
     <!-- Icon -->
     <div class="fadeIn first mt-3">
-      <img src="<?= $url ?>images/logo.svg" alt="logo" width="150" class="img-fluid" id="icon">
+      <img src="<?= $url ?>assets/images/logo.svg" alt="logo" width="150" class="img-fluid" id="icon">
     </div>
 
     <div class="px-3">
@@ -78,5 +78,5 @@ include('header.php');
 
 
 <?php
-include('footer.php');
+include('./layouts/footer.php');
 ?>

@@ -1,7 +1,7 @@
 
 <?php
 
-class dbConnect {
+class Database {
 
     private $conn;
 
