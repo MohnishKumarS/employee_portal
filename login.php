@@ -19,7 +19,7 @@
         unset($_SESSION['error_msg']);
       }
       ?>
-    <div class="text-center"> <h4>login Form</h4></div>
+    <div class="text-center"> <h4>login</h4></div>
     <form  method="post" action="user-register.php">
     
        
