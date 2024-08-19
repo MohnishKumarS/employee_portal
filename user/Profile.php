@@ -1,5 +1,5 @@
 <?php
-  include('../layouts/header.php');
+include('../layouts/header.php');
 ?>
 <?php
 
@@ -11,45 +11,7 @@
 <div class="container-fluid">
   <div class="row">
     <!-- sidebar -->
-    <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar" id="sidebar">
-      <!-- <h1 class="bi bi-bootstrap text-primary d-flex my-4 justify-content-center"></h1> -->
-     <div class="bi text-primary d-flex justify-content-center">      <img src="<?=$url ?>assets/images/logo.svg" alt="logo" width="100" height="100"> </div>
-      <div class="list-group rounded-0">
-        <a href="#" class="list-group-item list-group-item-action active border-0 d-flex align-items-center">
-          <span class="bi bi-border-all"></span>
-          <span class="ml-2"> Employee Dashboard</span>
-        </a>
-       
-
-        <button class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#sale-collapse">
-          <div>
-            <span class="bi bi-cart-dash"></span>
-            <span class="ml-2">User</span>
-          </div>
-          <span class="bi bi-chevron-down small"></span>
-        </button>
-        <div class="collapse" id="sale-collapse" data-parent="#sidebar">
-          <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action border-0 pl-5">Profile</a>
-            <a href="#" class="list-group-item list-group-item-action border-0 pl-5">Leave</a>
-          </div>
-        </div>
-
-        <button class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#purchase-collapse">
-          <div>
-            <span class="bi bi-cart-plus"></span>
-            <span class="ml-2">Tickets</span>
-          </div>
-          <span class="bi bi-chevron-down small"></span>
-        </button>
-        <div class="collapse" id="purchase-collapse" data-parent="#sidebar">
-          <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action border-0 pl-5">Tickets</a>
-            <a href="#" class="list-group-item list-group-item-action border-0 pl-5">Finished</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php include('../user/layouts/sidebar.php'); ?>
     <!-- overlay to close sidebar on small screens -->
     <div class="w-100 vh-100 position-fixed overlay d-none" id="sidebar-overlay"></div>
     <!-- note: in the layout margin auto is the key as sidebar is fixed -->
@@ -66,19 +28,79 @@
             <span class="bi bi-chevron-down ml-1 mb-2 small"></span>
           </button>
           <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="logout-dropdown">
-            <a class="dropdown-item" href="logout.php">Logout</a>
-            <a class="dropdown-item" href="#">Settings</a>
+            <a class="dropdown-item" href="<?= $url ?>logout.php">Logout</a>
+
           </div>
         </div>
       </nav>
       <!-- main content -->
       <main class="container-fluid">
-       
-        
+
+
         <div class="jumbotron jumbotron-fluid rounded bg-white border-0 shadow-sm border-left px-4">
           <div class="container">
-            <h1 class="display-4 mb-2 text-primary">CARD</h1>
-            <p class="lead text-muted">Simple Admin Dashboard with Bootstrap.</p>
+            <div class="row align-items-center justify-content-center">
+         
+             <div class="col-md-4  col-sm-6 bg-info text-white p-3 text-center">
+             <div class="column-content justify-content-center">
+
+                      <div class="">
+                      <img src="https://static.vecteezy.com/system/resources/previews/019/900/306/non_2x/happy-young-cute-illustration-face-profile-png.png" class="rounded" alt="..." style="
+    width: 150px;
+    height: auto;
+">
+          </div>
+             </div>
+             <div class="column-content  ">
+                 <h2>DINESH</h2>
+                 <p> WEB DEVELOPER  </p>
+
+             </div>
+              </div>
+              <div class="col-md-8  col-sm-6 text-bg-light p-3">
+                  <div class="d-flex flex-row justify-content-around  align-items-center flex-wrap">
+                        <div class="col-12 col-md-4">
+                              <div class="column-content p-3">
+                                <h3>Email</h3>
+                                <p>adin1@gmail.com</p>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <div class="column-content p-3">
+                              <h3>Phone</h3>
+                              <p>0979787878</p>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <div class="column-content p-3">
+                              <h3>AGe</h3>
+                              <p>25</p>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <div class="column-content p-3">
+                              <h3>Date of join</h3>
+                              <p>25/11/2024</p>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <div class="column-content p-3">
+                              <h3>Location</h3>
+                              <p>chennai</p>
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <div class="column-content p-3">
+                              <h3>Bload group</h3>
+                              <p>Ab-</p>
+                              </div>
+                            </div>
+                  </div>
+              </div>
+
+             
+
+            </div>
           </div>
         </div>
       </main>
@@ -88,5 +110,5 @@
 
 
 <?php
-  include('../layouts/footer.php');
+include('../layouts/footer.php');
 ?>
