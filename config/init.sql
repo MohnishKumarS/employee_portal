@@ -15,9 +15,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for employee_portal
-CREATE DATABASE IF NOT EXISTS `employee_portal` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `employee_portal`;
+USE employee_portal;
 
 -- Dumping structure for table employee_portal.employees
 CREATE TABLE IF NOT EXISTS `employees` (
