@@ -1,7 +1,6 @@
 <?php
   include('./layouts/header.php');
 
-  echo __DIR__;
 ?>
 
 <div class="wrapper fadeInDown ">

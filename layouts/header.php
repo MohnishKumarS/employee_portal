@@ -5,7 +5,7 @@ session_start();
 <html>
 
 <head>
-  <?php include __DIR__.'/../config/index.php'; ?>
+  <!-- <?php include __DIR__.'/../config/index.php'; ?> -->
   <title>Employment Portal | eWallHost</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/css/style.css">
